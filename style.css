@@ -1,0 +1,158 @@
+/* pengaturan dasar */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #F7F3ED;
+    color: #46372D;
+}
+
+/* header */
+header {
+    background-color: #46372D;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* navigasi */
+nav {
+    background-color: #5A4638;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #E8B99A;
+}
+
+/* main */
+main {
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+/* banner */
+.banner {
+    background-color: #EADBC8;
+    text-align: center;
+    padding: 45px 20px;
+    border-radius: 15px;
+    margin-bottom: 35px;
+}
+
+/* tombol banner */
+.tombol {
+    display: inline-block;
+    background-color: #C87952;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.tombol:hover {
+    background-color: #A85A3A;
+}
+
+/* judul produk */
+#produk h2,
+#produk > p {
+    text-align: center;
+}
+
+/* daftar produk berjajar ke samping */
+.daftar-produk {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+/* kotak produk */
+.produk {
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* gambar produk */
+.produk .gambar {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+/* harga produk */
+.produk .harga {
+    font-weight: bold;
+    color: #8B4513;
+}
+
+/* tombol checkout */
+.produk button {
+    background-color: #5A4638;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.produk button:hover {
+    background-color: #C87952;
+}
+
+/* bagian tentang kami dan kontak */
+.tentang,
+.kontak {
+    background-color: white;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 12px;
+    line-height: 1.7;
+}
+
+/* footer */
+footer {
+    background-color: #46372D;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* tampilan tablet */
+@media (max-width: 900px) {
+    .daftar-produk {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* tampilan HP */
+@media (max-width: 500px) {
+    .daftar-produk {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
